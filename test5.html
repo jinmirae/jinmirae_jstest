@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   점수:<input type=text name="point"><br>
+   <input type="button" name="btnPoint" value="Stop" onclick="doStop()"><br>
+   <input type="button" name="btnCalc" value="Show" onclick="getResult()"><br>
+</body>
+<script>
+
+    let gn;
+    let timer;
+    function getResult() {
+        //방법01
+        //setTimeout(showText,3000);//showText를 3초 후 실행한다. 
+        //showText(함수명,지연시간(ms));
+
+        //방법02
+        //setTimeout(function(){
+        //    document.getElementsByName('point')[0].value="3초가 지났습니다.";
+        //},3000);
+        alert("Interval Timer가 시작합니다.");
+        gn=2;
+        timer=setInterval(showText,2000);
+    }
+    function showText() {
+        //document.getElementsByName('point')[0].value="3초가 지났습니다."
+        console.log(gn);
+        document.getElementsByName('point')[0].value=gn+"초가 지났습니다.";
+        gn+=2;
+    }
+    function doStop() {
+        clearInterval(timer);
+        document.getElementsByName('point')[0].value='';
+    }
+</script>
+</html>

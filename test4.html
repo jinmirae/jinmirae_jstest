@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   점수:<input type=text name="point"><br>
+   <input type="button" name="btnPoint" value="입력" onclick="getPoint()"><br>
+   <input type="button" name="btnCalc" value="계산" onclick="getResult()"><br>
+</body>
+<script>
+    var arPoint=[];
+
+    function getPoint() {
+        //point안의 점수값을 읽어서
+        //arPoint배열에 추가
+        arPoint.push(document.getElementsByName('point')[0].value);
+        //alert(arPoint);
+        
+    }
+    function getResult() {
+        //합계/평균을 구해서
+        //alert로 출력
+        //합계:
+        //평균:
+        k=0;
+        for(i=0;i<arPoint.length;i++) {
+            k=k+parseInt(arPoint[i]);
+        }
+        alert("합계:"+k+'\n'+"평균:"+k/i);
+    }
+</script>
+</html>
