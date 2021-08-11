@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" name="doit" value="  시작  " onclick="doStart()">
+</body>
+<script>
+
+    let oon
+    let sstop
+
+    function showText() {
+        document.getElementsByName('doit')[0].value=oon+"초가 지났습니다.";
+        if(oon==0){
+            document.getElementsByName('doit')[0].value='시작';
+            clearInterval(sstop);
+        }
+        oon-=1; //54321
+    }
+
+    function doStart() {
+        alert("Timer가 시작합니다.");
+        oon=5;
+        sstop=setInterval(showText,1000);
+        
+    }
+    
+</script>
+</html>

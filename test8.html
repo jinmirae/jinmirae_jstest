@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    점수:<input type="text" id="point" style="background-color: yellow;"><br>
+    <input type="button" id="btnShow" value="Show" ><br>
+    <input type="button" id="btnClear" value="Clear" >
+   <!--
+       blur : focus가 떠났을 때
+       focus : 마우스 왼쪽버튼이 눌려서 focus가 들어왔을 때
+       click : 마우스 왼쪽버튼이 클릭됐을 때
+       dlbclick : 마우스 왼쪽버튼이 더블클릭됐을 때
+       change : html tag안의 값이 변경됐을 때
+   -->
+</body>
+<script src='https://code.jquery.com/jquery-3.5.0.js'></script>
+<script>
+    $(document)
+    .ready(function(){
+        $('#point').val(50);
+        $('#btnClear').hide();//fadeOut(1000);
+    })
+    .on('click','#btnShow',function(){
+        //point text안에 100을 표시
+        $('#point').val("100");
+        $(this).hide();//fadeOut//this는 자신
+        $('#btnClear').show();//fadeIn();
+        obj={'background-color':'white','color':'red'};
+        $('#point').css(obj);
+    })
+    .on('click','#btnClear',function(){
+        //point text안을 비운다.
+        $('#point').val("999");
+        $(this).hide();//fadeOut
+        $('#btnShow').show();//fadeIn();
+        $('#point').css({'background-color':'yellow','color':'blue','font-size':'24px'});
+    })
+
+</script>
+</html>

@@ -10,7 +10,7 @@
    점수:<input type=text name="point"><br>
    <input type="button" name="btnPoint" value="Stop" onclick="doStop()"><br>
    <input type="button" name="btnCalc" value="Show" onclick="getResult()"><br>
-</body>
+</body> 
 <script>
 
     let gn;
@@ -26,7 +26,7 @@
         //},3000);
         alert("Interval Timer가 시작합니다.");
         gn=2;
-        timer=setInterval(showText,2000);
+        timer=setInterval(showText,2000);//call-back 직접호출이 아니고, 실행을 등록해놓고 조건에 맞으면 웹브라우저 실행
     }
     function showText() {
         //document.getElementsByName('point')[0].value="3초가 지났습니다."
