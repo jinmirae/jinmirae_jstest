@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    모바일번호: <input type="tel" id="txtMobile"><br>
+    이름(실명): <input type="text" id="txtName"><br>
+    성별: <input type="radio" name="gender" id="male">남성&nbsp;
+    <input type="radio" name="gender" id="female">여성<br>
+    생일: <input type="text" id="day"><br>
+    거주지역: <select name="address" id="address">
+        <option value="c1" id="c1">지역을 선택해 주세요.</option>
+        <option value="c2" id="c2">경기</option>
+        <option value="c3" id="c3">강원</option>
+        <option value="c4" id="c4">충남</option>
+        <option value="c5" id="c5">충북</option>
+        <option value="c6" id="c6">경남</option>
+        <option value="c7" id="c7">경북</option>
+        <option value="c8" id="c8">서울</option>
+        <option value="c9" id="c9">부산</option>
+        <option value="c10" id="c10">대전</option>
+        <option value="c11" id="c11">광주</option>
+        <option value="c12" id="c12">대구</option>
+        <option value="c13" id="c13">인천</option>
+        </select><br>
+
+    관심분야: <input type="checkbox" name="hobby" id="a1">재테크
+    <input type="checkbox" name="hobby" id="a2">부동산
+    <input type="checkbox" name="hobby" id="a3">주식
+    <input type="checkbox" name="hobby" id="a4">채권
+    <input type="checkbox" name="hobby" id="a5">선물/옵션
+    <input type="checkbox" name="hobby" id="a6">해외투자
+    <input type="checkbox" name="hobby" id="a7">공모주<br>
+
+    취미: <input type="checkbox" name="hobby" id="b1">골프
+    <input type="checkbox" name="hobby" id="b2">수영
+    <input type="checkbox" name="hobby" id="b3">피트니스
+    <input type="checkbox" name="hobby" id="b4">등산
+    <input type="checkbox" name="hobby" id="b5">영화
+    <input type="checkbox" name="hobby" id="b6">라이딩<br>
+
+    비밀번호: <input type="password" id="password1"><br>
+    비밀번호 확인: <input type="password" id="password2"><br>
+    <button id="btnShow">보기</button>
+
+</body>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+    $(document)
+    .on("click","#btnShow",function(){
+    str1=$("#txtMobile").val();
+    if(str1==""){
+        alert('모바일번호를 입력하시오')
+    }
+    str2=$("#txtName").val();
+    if(str2==""){
+        alert('이름을 입력하시오')
+    }
+    if($("#male").is(":checked")){
+        str3="male";
+    } else if($("#female").is(":checked")){
+        str4="female";
+    } else {
+        alert('성별을 지정하십시오');
+    }    
+    str5=$("#day").val();
+    str6="";
+    if($("#c2").is(":checked")){
+        str6="경기";
+    }
+    if($("#c3").is(":checked")){
+        str6+="강원";
+    }
+    if($("#c4").is(":checked")){
+        str6+="충남";
+    }
+    if($("#c5").is(":checked")){
+        str6+="충북";
+    }
+    if($("#c6").is(":checked")){
+        str6+="경남";
+    }
+    if($("#c7").is(":checked")){
+        str6+="경북";
+    }
+    if($("#c8").is(":checked")){
+        str6+="서울";
+    }
+    if($("#c9").is(":checked")){
+        str6+="부산";
+    }
+    if($("#c10").is(":checked")){
+        str6+="대전";
+    }
+    if($("#c11").is(":checked")){
+        str6+="광주";
+    }
+    if($("#c12").is(":checked")){
+        str6+="대구";
+    }
+    if($("#c13").is(":checked")){
+        str6+="인천";
+    }
+    else {
+        alert('지역을 선택하십시오');
+    }
+    str7="";
+    if($("#a1").is(":checked")){
+        str7="제테크";
+    }
+    if($("#a2").is(":checked")){
+        str7+="부동산";
+    }
+    if($("#a3").is(":checked")){
+        str7+="주식";
+    }
+    if($("#a4").is(":checked")){
+        str7+="채권";
+    }
+    if($("#a5").is(":checked")){
+        str7+="선물/옵션";
+    }
+    if($("#a6").is(":checked")){
+        str7+="해외투자";
+    }
+    if($("#a7").is(":checked")){
+        str7+="공모주";
+    }
+    else {
+        alert('관심분야를 선택하십시오');
+    }
+    str8="";
+    if($("#b1").is(":checked")){
+        str8="골프";
+    }
+    if($("#b2").is(":checked")){
+        str8+="수영";
+    }
+    if($("#b3").is(":checked")){
+        str8+="피트니스";
+    }
+    if($("#b4").is(":checked")){
+        str8+="등산";
+    }
+    if($("#b5").is(":checked")){
+        str8+="영화";
+    }
+    if($("#b6").is(":checked")){
+        str8+="라이딩";
+    }
+    else {
+        alert('취미를 선택하십시오');
+    }
+    str9=$("password1").val();
+    if(str9==""){
+        alert('비밀번호를 입력하시오')
+    }
+    str10=$("password1").val();
+    if(str10==""){
+        alert('비밀번호 확인을 입력하시오')
+    }else if(str9!=str10) {
+        alert('비밀번호/비밀번호 확인이 일치하지 않습니다')
+    }
+    str=str1+'\n'+str2+'\n'+str3+'\n'+str4+'\n'+str5+'\n'+str6+'\n'+str7+'\n'+str8+'\n'+str9;
+    alert(str);
+    return false;
+    })
+    
+
+</script>
+
+
+
+
+</html>

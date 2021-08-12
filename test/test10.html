@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+Text:<input type="text" id="txtName"><br>
+Hidden:<input type="hidden" id="txtHidden"><br>
+Radio:<input type="radio" name="gender" id="male">남성&nbsp;
+<input type="radio" name="gender" id="female">여성<br>
+Nuber:<input type="number"  id="txtNum" value="99"><br>
+Checkbox:<input type="checkbox" name="hobby" id="movie">영화보기
+<input type="checkbox" name="hobby" id="riding">모터사이클
+<input type="checkbox" name="hobby" id="climbing">등산<br>
+Textarea:<textarea id="txtAddress" cols="60" rows="3"></textarea><br>
+Select: <select id="selNation" size="5">
+<option value="Korea">대한민국</option>
+<option value="USA">USA</option>
+<option value="FR">France</option>
+<option value="UK">England</option>
+</select><br>
+<button id="btnShow">보기</button>
+<button id="btnWrite">쓰기</button><br>
+<div id=dvShow style="background-color: yellow;width:300px;height:200px;">
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+$(document)
+.on("click","#btnShow",function(){
+    str1=$("#txtName").val();
+    str2=$("#txtHidden").val();
+    if($("#male").is(":checked")){
+        str3="male";
+    } else if($("#female").is(":checked")){
+        str4="female";
+    } else {
+        //str3="";
+        alert('성별을 지정하십시오');
+    }    
+    str4=$("#txtNum").val();
+    str5="";
+    if($("#movie").is(":checked")){
+        str5="영화보기";
+    }
+    if($("#riding").is(":checked")){
+        str5+="모터사이클";
+    }
+    if($("#climbing").is(":checked")){
+        str5+="등산";
+    }
+    if($())
+    str6=$("#txtAddress").val();
+    str7=$("#selNation").val();
+    str=str1+'<br>'+str2+'<br>'+str3+'<br>'+str4+'<br>'+str5+'<br>'+str6+'<br>'+str7;
+    $("#dvShow").html(str);
+    return false;
+})
+.on('click','#btnWrite',function(){
+    $('#txtName').val('Johanson');
+    $('#txtHidden').val('숨겨라');
+    $('#female').prop('checked',true);
+    $('#txtNum').val(150);
+    $('#movie').prop('checked',true);
+    $('#climbing').prop('checked',true);
+    $('#txtAddress').val("천안시 동남구 대흥동 125 백자빌딩");
+    $('#selNation').val('US');
+    return false;
+})
+.on('blur','#txtName',function(){//call=back
+    alert($(this).val());
+    return false;//제이쿼리 권장사항 버블링에러 예방 return false;로 마무리 필수
+})
+</script>
+</html>
