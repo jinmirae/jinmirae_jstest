@@ -51,10 +51,11 @@ table {
 
 /*--container영역--*/
 #container{
-	width:1925px;
-	height:3000px;
+	width:1280px;
+	height:650px;
 	text-align:left;
 	overflow:hidden;
+	background-image: url(water-3292794_1280.jpg);
 }
 
 /*--header영역--*/
@@ -65,8 +66,7 @@ table {
 	vertical-align:middle;
 }
 #gnav {
-	font-size: 17px;
-    font-weight: bold;
+	font-size: 14px;
 	width: 1920px;
 	}
 	
@@ -82,12 +82,12 @@ table {
 
 #gnav .menu li a {
 	display:block;
-    width: 125px;
-	height: 40px;
+    width: 110px;
+	height: 30px;
 	text-align:center;
 	color:black;
-    background-color: white;
     padding-top: 21px;
+	text-decoration: blueviolet;
 	}
 
 #gnav .menu { position:relative; }
@@ -96,6 +96,7 @@ table {
     color:rgb(160, 160, 160);
 }
 
+
 /*--main영역--*/
 main{
 	clear:both;
@@ -103,29 +104,30 @@ main{
 
 /*--nav영역--*/
 .nav {
-    width: 250px;
+    width: 230px;
     height: 500px;
 	border: 1px black solid;
     display: block;
     float: left;
+	background-color: rgba(1, 0, 73, 0.829);
 }
 h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     width: 200px;
-    height: 30px;
-    background-color: rgb(226, 226, 226);
-    color:black;
+    height: 20px;
+    color:white;
     padding: 16px 25px 10px 25px;
-    text-align: center;
+    text-align: left;
 }
 .nav li a {
 	display:block;
     width: 200px;
-	height: 20px;
-    font-size: 15px;
-	text-align:center;
-	color:black;
+	height: 10px;
+    font-size: 14px;
+	text-align: left;
+	font-weight: 500;
+	color:white;
     padding: 18px 25px 10px 25px;
 	}
 .nav a:hover {
@@ -137,22 +139,24 @@ h2 {
     width: 800px;
     height: 500px;
     padding-left: 30px;
-    margin-left: 50px;
+    margin-left: 80px;
     float: left;
 }
 .choices {
     width: 350px;
-    height: 300px;
+    height: 400px;
     margin-bottom: 10px;
 }
 .choices th {
     width: 110px;
     padding-right: 15px;
+	font-weight: 600;
     text-align: right;
 }
 .choices input {
     width: 200px;
     height: 25px;
+	margin-bottom: 30px;
     text-align: left;
 }
 
@@ -162,6 +166,7 @@ h2 {
     width: 320px;
     height: 50px;
     text-align: center;
+	margin-left: 25px;
     
 }
 .btn {
@@ -169,14 +174,14 @@ h2 {
 	width: 70px;
     height: 40px;
 	padding: 10px;
-    margin-left: 5px;
+    margin-left: 15px;
 	border: none;
 	font-size: 15px;
     border-radius: 10%;
 }
 /*버튼에 마우스를 올려놓았을 때*/
 .btn:hover {
-	opacity: 0.7;
+	background-color: rgb(211, 211, 211);
 }
 /*버튼을 누른 시간*/
 .btn:active {
@@ -184,6 +189,6 @@ h2 {
 }
 /*버튼의 역할에 맞춰 색상 나누기*/
 .btn {
-	background-color: #ccc;
+	background-color: rgb(189, 189, 189);
 }
 

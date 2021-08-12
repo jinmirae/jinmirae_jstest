@@ -49,23 +49,24 @@ table {
 }
 /*--container영역--*/
 #container{
-	width:1925px;
-	height:3000px;
+	width:1280px;
+	height:700px;
 	text-align:left;
 	overflow:hidden;
+	background-image: url(pool-2128578_1280.jpg);
+	font-weight: 800;
 }
 
 /*--header영역--*/
 #header {
-	width:1920px;
+	width:1280px;
 	height:40px;
 	display:table-cell;
 	vertical-align:middle;
 }
 #gnav {
-	font-size: 17px;
-    font-weight: bold;
-	width: 1920px;
+	font-size: 14px;
+	width: 1280px;
 	}
 	
 #gnav .menu:after {
@@ -80,11 +81,10 @@ table {
 
 #gnav .menu li a {
 	display:block;
-    width: 125px;
+    width: 110px;
 	height: 40px;
 	text-align:center;
-	color:black;
-    background-color: white;
+	color:white;
     padding-top: 21px;
 	}
 
@@ -99,27 +99,107 @@ main{
 	clear:both;
 }
 
+h2 {
+	width: 350px;
+	height: 25px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	font-size: 18px;
+	color: white;
+}
+
+th {
+    width: 110px;
+    padding-right: 15px;
+	font-weight: 600;
+    text-align: right;
+}
+
+.space_table option {
+    width: 200px;
+    height: 25px;
+	margin-bottom: 30px;
+    text-align: left;
+}
+
 /*--space영역 1번 박스--*/
 .space {
     display: block;
     float: left;
-    width: 450px;
+    width: 350px;
     height: 500px;
 }
+.space_table {
+	height: 140px;
+	width: 350px;
+	background-color: white;
+	opacity: 0.9;
+	margin-left: -30px;
+	margin-bottom: 30px;
+	padding-right: 10px;
+}
 
+.space_table th {
+	padding-top: 15px;
+	color: black;
+}
+
+.space_table input {
+	width: 120px;
+}
+
+.space select {
+	width: 160px;
+	height: 25px;
+}
+#search {
+	width: 40px;
+}
+.possible_list select {
+	width: 320px;
+	height: 300px;
+	opacity: 0.95;
+}
 /*--choicesystem영역 2번 박스--*/
 .choicesystem {
     display: block;
     float: left;
-    width: 450px;
-    height: 500px;
+    width: 370px;
+    height: 440px;
+	margin-left: 40px;
+	margin-right: 20px;
+	padding-left: 5px;
+	background-color: rgba(255, 255, 255, 0.438);
 }
+
+.choices {
+	width: 350px;
+	height: 300px;
+	margin-top: 30px;
+}
+
+.choices td input {
+	width: 170px;
+	height: 23px;
+	margin-bottom: 25px;
+	color: black;
+}
+
+#bunlyu1 {
+	width: 78px;
+}
+
+#bunlyu2 {
+	width: 78px;
+}
+
 /*--btnsm영역--*/
 .btns {
     overflow: hidden;
-    width: 320px;
+    width: 350px;
     height: 50px;
     text-align: center;
+	margin-top: 15px;
     
 }
 .btn {
@@ -127,14 +207,14 @@ main{
 	width: 70px;
     height: 40px;
 	padding: 10px;
-    margin-left: 5px;
+    margin-left: 10px;
 	border: none;
 	font-size: 15px;
     border-radius: 10%;
 }
 /*버튼에 마우스를 올려놓았을 때*/
 .btn:hover {
-	opacity: 0.7;
+	background-color: rgb(196, 196, 196);
 }
 /*버튼을 누른 시간*/
 .btn:active {
@@ -142,7 +222,8 @@ main{
 }
 /*버튼의 역할에 맞춰 색상 나누기*/
 .btn {
-	background-color: #ccc;
+	background-color: rgb(247, 247, 247);
+	border: 1px solid;
 }
 
 /*--impossible_list영역 3번 박스--*/
@@ -151,4 +232,12 @@ main{
     float: left;
     width: 450px;
     height: 500px;
+	margin-left: 45px;
+	margin-top: 30px;
+}
+
+.impossible_list select {
+	width: 320px;
+	height: 300px;
+	opacity: 0.95;
 }
