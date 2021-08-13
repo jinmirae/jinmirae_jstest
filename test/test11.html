@@ -72,43 +72,43 @@
     }    
     str5=$("#day").val();
     str6="";
-    if($("#c2").is(":checked")){
+    if($("#c2").is("c2")){
         str6="경기";
     }
-    if($("#c3").is(":checked")){
+    if($("#c3").is("c3")){
         str6+="강원";
     }
-    if($("#c4").is(":checked")){
+    if($("#c4").is("c4")){
         str6+="충남";
     }
-    if($("#c5").is(":checked")){
+    if($("#c5").is("c5")){
         str6+="충북";
     }
-    if($("#c6").is(":checked")){
+    if($("#c6").is("c6")){
         str6+="경남";
     }
-    if($("#c7").is(":checked")){
+    if($("#c7").is("c7")){
         str6+="경북";
     }
-    if($("#c8").is(":checked")){
+    if($("#c8").is("c8")){
         str6+="서울";
     }
-    if($("#c9").is(":checked")){
+    if($("#c9").is("c9")){
         str6+="부산";
     }
-    if($("#c10").is(":checked")){
+    if($("#c10").is("c10")){
         str6+="대전";
     }
-    if($("#c11").is(":checked")){
+    if($("#c11").is("c11")){
         str6+="광주";
     }
-    if($("#c12").is(":checked")){
+    if($("#c12").is("c12")){
         str6+="대구";
     }
-    if($("#c13").is(":checked")){
+    if($("#c13").is("c13")){
         str6+="인천";
     }
-    else {
+    else if($("#c1").is("c1")) {
         alert('지역을 선택하십시오');
     }
     str7="";
@@ -133,8 +133,9 @@
     if($("#a7").is(":checked")){
         str7+="공모주";
     }
-    else {
-        alert('관심분야를 선택하십시오');
+    if(str7==""){
+        alert("관심분야를 선택하십시오")
+        return false;
     }
     str8="";
     if($("#b1").is(":checked")){
@@ -155,8 +156,9 @@
     if($("#b6").is(":checked")){
         str8+="라이딩";
     }
-    else {
-        alert('취미를 선택하십시오');
+    if(str8==""){
+        alert("취미를 선택하십시오")
+        return false;
     }
     str9=$("password1").val();
     if(str9==""){
@@ -168,10 +170,13 @@
     }else if(str9!=str10) {
         alert('비밀번호/비밀번호 확인이 일치하지 않습니다')
     }
-    str=str1+'\n'+str2+'\n'+str3+'\n'+str4+'\n'+str5+'\n'+str6+'\n'+str7+'\n'+str8+'\n'+str9;
-    alert(str);
-    return false;
-    })
+    str=str1+'\n'+str2+'\n'+str3+'\n'+str4+'\n'+str5+'\n'+str6+'\n'+str7+'\n'+str8+'\n'+str9+'\n'+str10;
+    $("#btnShow").text(str);
+    .on("click","#btnShow",function(){
+        alert(str);
+        return false;
+    }
+})
     
 
 </script>
